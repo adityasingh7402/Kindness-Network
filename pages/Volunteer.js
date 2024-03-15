@@ -6,11 +6,8 @@ const Register = () => {
 
   const [formData, setFormData] = useState({
     name: '',
-    age: '',
-    empId: '',
-    username: '',
     email: '',
-    password: '',
+    phone: '',
   });
 
   const handleChange = (e) => {
@@ -21,7 +18,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('/api/register', {
+      const response = await fetch('/api/Volunteer_ListApi', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -29,7 +26,7 @@ const Register = () => {
         body: JSON.stringify(formData),
       });
       if (response.ok) {
-        router.push('/login');
+        router.push('/Success');
       } else {
         const data = await response.json();
         console.error('Registration error:', data.message);
@@ -44,7 +41,7 @@ const Register = () => {
   return (
     <div className="flex justify-center items-center h-full bg-gray-100">
       <div className="max-w-md w-full p-8 bg-white shadow-lg rounded-md">
-        <h1 className="text-3xl font-bold mb-4">Register</h1>
+        <h1 className="text-3xl font-bold mb-4">Volunteer</h1>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label className="block text-gray-700 font-bold mb-2" htmlFor="name">
@@ -58,36 +55,6 @@ const Register = () => {
               value={formData.name}
               onChange={handleChange}
               placeholder="Enter your name"
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <label className="block text-gray-700 font-bold mb-2" htmlFor="age">
-              Age
-            </label>
-            <input
-              className="w-full px-3 py-2 placeholder-gray-400 border rounded-md focus:outline-none focus:ring focus:border-blue-500"
-              type="number"
-              id="age"
-              name="age"
-              value={formData.age}
-              onChange={handleChange}
-              placeholder="Enter your age"
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <label className="block text-gray-700 font-bold mb-2" htmlFor="empId">
-              Employee ID
-            </label>
-            <input
-              className="w-full px-3 py-2 placeholder-gray-400 border rounded-md focus:outline-none focus:ring focus:border-blue-500"
-              type="text"
-              id="empId"
-              name="empId"
-              value={formData.empId}
-              onChange={handleChange}
-              placeholder="Enter your employee ID"
               required
             />
           </div>
@@ -107,32 +74,17 @@ const Register = () => {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 font-bold mb-2" htmlFor="username">
-              Username
+            <label className="block text-gray-700 font-bold mb-2" htmlFor="phone">
+              Phone
             </label>
             <input
               className="w-full px-3 py-2 placeholder-gray-400 border rounded-md focus:outline-none focus:ring focus:border-blue-500"
               type="text"
-              id="username"
-              name="username"
-              value={formData.username}
+              id="phone"
+              name="phone"
+              value={formData.phone}
               onChange={handleChange}
-              placeholder="Choose a username"
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <label className="block text-gray-700 font-bold mb-2" htmlFor="password">
-              Password
-            </label>
-            <input
-              className="w-full px-3 py-2 placeholder-gray-400 border rounded-md focus:outline-none focus:ring focus:border-blue-500"
-              type="password"
-              id="password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-              placeholder="Choose a password"
+              placeholder="Enter Contact Number"
               required
             />
           </div>

@@ -1,11 +1,11 @@
 import connectDb from "../../middleware/mongoose"
-import User from "../../models/User"
+import Volunteer_List from "../../models/Volunteer_List"
 
 
 const handler = async (req, res)=>{
     if(req.method == 'POST'){
-        const {name, age, empId, username, email, password} = req.body
-        let u = new User({name, age, empId, username, email, password})
+        const {name, email, phone} = req.body
+        let u = new Volunteer_List({name, email, phone})
         await u.save()
         res.status(200).json({ success: "success" })
     }
