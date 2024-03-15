@@ -3,10 +3,8 @@ import mongoose from 'mongoose';
 let NGO_List;
 
 try {
-  // Try to retrieve the existing User model
   NGO_List = mongoose.model('NGO_List');
 } catch {
-  // If the model doesn't exist, define it
   const NGO_ListSchema = new mongoose.Schema({
     NGO_Organisation: {
       type: String,

@@ -32,12 +32,10 @@ const Register = () => {
         router.push('/Success');
       } else {
         const data = await response.json();
-        console.error('Registration error:', data.message);
-        // Handle error response
+        console.error('error:', data.message);
       }
     } catch (error) {
-      console.error('Failed to register:', error);
-      // Handle fetch error
+      console.error('Failed:', error);
     }
   };
 

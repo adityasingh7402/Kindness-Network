@@ -3,10 +3,8 @@ import mongoose from 'mongoose';
 let Volunteer_List;
 
 try {
-  // Try to retrieve the existing User model
   Volunteer_List = mongoose.model('Volunteer_List');
 } catch {
-  // If the model doesn't exist, define it
   const Volunteer_ListSchema = new mongoose.Schema({
     Volunteer_Name: {
       type: String,

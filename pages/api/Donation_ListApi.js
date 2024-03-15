@@ -4,8 +4,8 @@ import Donation_List from "../../models/Donation_List"
 
 const handler = async (req, res)=>{
     if(req.method == 'POST'){
-        const {name, email, phone} = req.body
-        let u = new Donation_List({name, email, phone})
+        const {Donor_Name, Donor_Email, Donor_Phone, Donor_Address, Donor_PaymentMethod, Donor_Purpose} = req.body
+        let u = new Donation_List({Donor_Name, Donor_Email, Donor_Phone, Donor_Address, Donor_PaymentMethod, Donor_Purpose})
         await u.save()
         res.status(200).json({ success: "success" })
     }

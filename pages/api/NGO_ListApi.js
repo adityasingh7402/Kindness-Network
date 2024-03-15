@@ -4,8 +4,8 @@ import NGO_List from "../../models/NGO_List"
 
 const handler = async (req, res)=>{
     if(req.method == 'POST'){
-        const {name, email, phone} = req.body
-        let u = new NGO_List({name, email, phone})
+        const {NGO_Organisation, NGO_Type, NGO_Mission, NGO_ActivitesDone, NGO_Email, NGO_Contact, NGO_Address, NGO_Website, NGO_SocialMedia} = req.body
+        let u = new NGO_List({NGO_Organisation, NGO_Type, NGO_Mission, NGO_ActivitesDone, NGO_Email, NGO_Contact, NGO_Address, NGO_Website, NGO_SocialMedia})
         await u.save()
         res.status(200).json({ success: "success" })
     }
