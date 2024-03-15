@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.logoImg{
+    width: 90px;
+    height: 90px;
+}
+
+.sub-menu {
+    display: none;
+}
+
+.ngos:hover .sub-menu{
+    display: block;
+}
+.sub-menu-2 {
+    display: none;
+}
+
+.donation:hover .sub-menu-2{
+    display: block;
+}

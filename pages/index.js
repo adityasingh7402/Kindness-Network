@@ -7,18 +7,46 @@ import { useRouter } from 'next/router';
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const router = useRouter()
-    useEffect(() => {
-        if (localStorage.getItem('myuser')) {
-            router.push('./admin')
-        }
-      }, [])
+  
   return (
     <>
       <div className="main_page">
-        <Link href={'/NGO'}>NGO</Link>
-        <Link href={'/Donation'}>Donation</Link>
-        <Link href={'/Volunteer'}>Volunteer</Link>
+        <div className="navbar flex justify-center items-center px-20 h-24 shadow-md">
+          <div className="logo w-1/2">
+            <div className="logoImg">
+              <img src="/logo.png" alt="" />
+            </div>
+          </div>
+          <div className="menus flex w-1/2 justify-start items-center ml-20">
+            <div className="list-menu mr-14 font-medium"><Link className=" hover:text-green-600" href={'/home'}>Home</Link></div>
+            <div className="list-menu mr-14 font-medium"><Link className=" hover:text-green-600" href={'/about'}>About</Link></div>
+            <div className="list-menu ngos cursor-pointer relative mr-14 font-medium"><div className=" hover:text-green-600">NGOs</div>
+              <div className="sub-menu absolute top-0 -left-20 w-52">
+                <div className="sub-list-list bg-white flex justify-between shadow-md mt-16 items-start flex-col">
+                  <Link className="px-6 py-3 hover:shadow-sm w-full hover:text-green-600" href={'/NGOs'}>Add NOG's</Link>
+                  <Link className="px-6 py-3 hover:shadow-sm w-full hover:text-green-600" href={''}>View NOG's</Link>
+                  <Link className="px-6 py-3 hover:shadow-sm w-full hover:text-green-600" href={''}>View Volunteer's</Link>
+                  <Link className="px-6 py-3 hover:shadow-sm w-full hover:text-green-600" href={''}>View Donations</Link>
+                </div>
+              </div>
+            </div>
+            <div className="list-menu donation cursor-pointer relative mr-14 font-medium"><div className=" hover:text-green-600">Donation</div>
+            <div className="sub-menu-2 absolute top-0 -left-10 w-52">
+                <div className="sub-list-list bg-white flex justify-between shadow-md mt-16 items-start flex-col">
+                  <Link className="px-6 py-3 hover:shadow-sm w-full hover:text-green-600" href={'/Donation'}>Donate</Link>
+                  <Link className="px-6 py-3 hover:shadow-sm w-full hover:text-green-600" href={''}>Become Volunteer</Link>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div className="first-section bg-green-500 h-screen">
+        <div className="suheading text-white p-20 pt-24">
+          <h2 className="text-9xl">KindnessNetwork</h2>
+          <p className="text-lg">Building Bridges Between Donors and NGOs for Meaningful Impact</p>
+        </div>
+          
+      </div>
       </div>
     </>
   );
