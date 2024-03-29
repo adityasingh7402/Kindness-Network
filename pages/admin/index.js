@@ -18,8 +18,8 @@ export default function Home() {
         <div className=" bg-green-900 w-56 border border-gray-200 rounded-sm py-8 px-5 shadow-sm h-min">
           <ul className="flex flex-col">
             <li className="text-xl pb-5 font-medium text-white flex items-center"><span className="text-2xl pr-5"></span> Inventory</li>
-            <li onClick={() => setActive("NGO_list")} className="text-base pb-5 font-medium cursor-pointer hover:text-red-200 text-white flex items-center"><span className="text-xl pr-5"></span> List of NGO's</li>
-            <li onClick={() => setActive("Volunteer_list")} className="text-base pb-5 font-medium cursor-pointer hover:text-red-200 text-white flex items-center"><span className="text-xl pr-5"></span> List of Volunteer's</li>
+            <li onClick={() => setActive("NGO_list")} className="text-base pb-5 font-medium cursor-pointer hover:text-red-200 text-white flex items-center"><span className="text-xl pr-5"></span> List of NGO&apos;s</li>
+            <li onClick={() => setActive("Volunteer_list")} className="text-base pb-5 font-medium cursor-pointer hover:text-red-200 text-white flex items-center"><span className="text-xl pr-5"></span> List of Volunteer&apos;s</li>
           </ul>
           <ul className="flex flex-col mt-2">
             <Link href={'/'}><li className="text-base pb-4 cursor-pointer hover:text-red-200 text-white flex items-center"><button className="px-5 py-2 border broder-white w-full rounded-full hover:bg-red-900"><p>Logout</p></button></li></Link>

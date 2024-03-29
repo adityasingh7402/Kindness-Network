@@ -23,9 +23,9 @@ export default function Home() {
             <div className="list-menu ngos cursor-pointer relative mr-14 font-medium"><div className=" hover:text-green-600">NGOs</div>
               <div className="sub-menu absolute top-0 -left-20 w-52">
                 <div className="sub-list-list bg-white flex justify-between shadow-md mt-16 items-start flex-col">
-                  <Link className="px-6 py-3 hover:shadow-sm w-full hover:text-green-600" href={'/NGOs'}>Add NOG's</Link>
-                  <Link className="px-6 py-3 hover:shadow-sm w-full hover:text-green-600" href={''}>View NOG's</Link>
-                  <Link className="px-6 py-3 hover:shadow-sm w-full hover:text-green-600" href={''}>View Volunteer's</Link>
+                  <Link className="px-6 py-3 hover:shadow-sm w-full hover:text-green-600" href={'/NGOs'}>Add NOG&apos;s</Link>
+                  <Link className="px-6 py-3 hover:shadow-sm w-full hover:text-green-600" href={''}>View NOG&apos;s</Link>
+                  <Link className="px-6 py-3 hover:shadow-sm w-full hover:text-green-600" href={''}>View Volunteer&apos;s</Link>
                   <Link className="px-6 py-3 hover:shadow-sm w-full hover:text-green-600" href={''}>View Donations</Link>
                 </div>
               </div>
@@ -45,7 +45,12 @@ export default function Home() {
           <h2 className="text-9xl">KindnessNetwork</h2>
           <p className="text-lg">Building Bridges Between Donors and NGOs for Meaningful Impact</p>
         </div>
-          
+          <div className="second-sub-section">
+            <div className="para"></div>
+            <div className="side-image">
+              <img src="" alt="" />
+            </div>
+          </div>
       </div>
       </div>
     </>
